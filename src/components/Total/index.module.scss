@@ -1,0 +1,19 @@
+@import "../../styles/GlobaslStyles.scss";
+
+.totalValue__section {
+  @include spacing();
+  border: 1px solid var(--grey-3);
+  border-radius: var(--radious-1);
+  width: 75%;
+  margin: 0 auto;
+
+  .totalValue__display {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+
+    span {
+      color: var(--brand-color-1);
+    }
+  }
+}
