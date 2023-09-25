@@ -1,0 +1,38 @@
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+.title-1 {
+  font-size: var(--fontSize-1);
+  font-weight: var(--weight-b);
+}
+
+.title-2 {
+  font-size: var(--fontSize-2);
+  font-weight: var(--weight-b);
+}
+
+.title-3 {
+  font-size: var(--fontSize-3);
+  font-weight: var(--weight-b);
+}
+
+.title-4 {
+  font-size: var(--fontSize-4);
+  font-weight: var(--weight-b);
+}
+
+.head-line {
+  font-size: var(--fontSize-3);
+  font-weight: var(--weight-r);
+}
+
+.text-r {
+  font-size: var(--fontSize-4);
+  font-weight: var(--weight-r);
+}
+
+.text-t {
+  font-size: var(--fontSize-4);
+  font-weight: var(--weight-t);
+}

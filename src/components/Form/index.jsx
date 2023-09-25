@@ -16,7 +16,7 @@ export const AppFinanceForm = () => {
             <input type="number" name="value" id="value" placeholder="1" />
             <label htmlFor="typeOfValue">Tipo de valor</label>
             <select name="typeOfValue" id="typeOfValue">
-              <option value="" disabled selected>
+              <option defaultValue>
                 Selecione o tipo
               </option>
               <option value="credit">Entrada</option>
