@@ -1,0 +1,9 @@
+@import '../../styles/GlobaslStyles.scss';
+
+.balance__section {
+  @include spacing();
+  
+  h2 {
+    margin-bottom: 2rem;
+  }
+}
