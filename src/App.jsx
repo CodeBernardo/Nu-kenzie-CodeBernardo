@@ -8,9 +8,13 @@ const App = () => {
   return (
     <>
       <AppHeader />
-      <AppFinanceForm />
-      <TotalValues />
+      <main>
+      <div>
+        <AppFinanceForm />
+        <TotalValues />
+      </div>
       <FinanceList />
+      </main>
     </>
   );
 };

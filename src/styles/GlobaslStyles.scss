@@ -23,3 +23,9 @@
   --weight-r: 500;
   --weight-t: 400;
 }
+
+@mixin spacing() {
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+

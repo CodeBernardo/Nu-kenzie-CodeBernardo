@@ -1,30 +1,40 @@
-import styles from "./index.module.scss"
+import styles from './index.module.scss';
 
 export const AppFinanceForm = () => {
   return (
     <>
-      <section>
+      <section className={styles.form__section}>
         <fieldset>
-          <form action="">
-            <label htmlFor="description">Descrição</label>
+          <form action="" className={styles.form__container}>
+            <label htmlFor="description" className="text-r">
+              Descrição
+            </label>
             <input
               type="text"
               name="description"
               id="description"
               placeholder="Digite aqui sua descrição"
+              className="head-line"
             />
-            <small>Ex: compra de roupas</small>
-            <label htmlFor="value">Valor (R$)</label>
-            <input type="number" name="value" id="value" placeholder="1" />
-            <label htmlFor="typeOfValue">Tipo de valor</label>
+            <small className="text-r">Ex: compra de roupas</small>
+            <label htmlFor="value" className="text-r">
+              Valor (R$)
+            </label>
+            <input
+              type="number"
+              name="value"
+              id="value"
+              placeholder="1"
+              className="head-line"
+            />
+            <label htmlFor="typeOfValue" className="text-r">
+              Tipo de valor
+            </label>
             <select name="typeOfValue" id="typeOfValue">
-              <option defaultValue>
-                Selecione o tipo
-              </option>
               <option value="credit">Entrada</option>
               <option value="debit">Saida</option>
             </select>
-            <button>Inserir valor</button>
+            <button className="head-line">Inserir valor</button>
           </form>
         </fieldset>
       </section>
