@@ -2,42 +2,52 @@
 
 .form__section {
   @include spacing();
-
-  fieldset {
-    border-radius: var(--radious-2);
-    padding: 1.875rem 0.9375rem ;
+  
+  .form__container {
     border: 1px solid var(--grey-3);
+    border-radius: var(--radius-2);
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      gap: 0.8rem;
+
+      input,
+      select {
+        height: 3rem;
+        padding-left: 1rem;
+        background-color: var(--grey-4);
+        border: none;
+        border-radius: var(--radius-1);
+      }
+
+    small {
+      position: relative;
+      bottom: 0.4375rem;
+      left: 0.625rem;
+      color: var(--grey-2);
+    }
+
+      button {
+        color: var(--white-fixed);
+        background-color: var(--brand-color-1);
+        height: 3rem;
+        border-radius: var(--radius-1);
+        border: none;
+        margin-bottom: 1rem;
+      }
+    }
   }
 }
 
-.form__container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9375rem;
-
-  color: var(--grey-1);
-
-  input,
-  select {
-    height: 3rem;
-    border-radius: var(--radious-1);
-    background-color: var(--grey-4);
-    border: none;
-    padding: 0 1.25rem;
-  }
-
-  small {
-    position: relative;
-    color: var(--grey-2);
-    bottom: 10px;
-  }
-
-  button {
-    color: var(--white-fixed);
-    background-color: var(--brand-color-1);
-    height: 3rem;
-    border-radius: var(--radious-1);
-    border: none;
+@media (min-width: 768px) {
+  .form__container {
+    button {
+      width: 250px;
+      align-self: flex-end;
+    }
   }
 }
+
 

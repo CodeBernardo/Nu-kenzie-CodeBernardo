@@ -2,8 +2,16 @@
 
 .balance__section {
   @include spacing();
-  
-  h2 {
-    margin-bottom: 2rem;
+
+  .balance__container {
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .balance__section {
+    width: 50%;
   }
 }

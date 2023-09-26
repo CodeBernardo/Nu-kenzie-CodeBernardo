@@ -1,0 +1,12 @@
+@import "./GlobaslStyles.scss";
+
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .aside__form {
+    width: 50%;
+  }
+}

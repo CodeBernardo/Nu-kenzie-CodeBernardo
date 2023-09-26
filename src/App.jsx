@@ -2,14 +2,14 @@ import { FinanceList } from './components/Finance-List';
 import { AppFinanceForm } from './components/Form';
 import { AppHeader } from './components/Header';
 import { TotalValues } from './components/Total';
-import "./styles/index.scss"
+import "./styles/index.scss";
 
 const App = () => {
   return (
     <>
       <AppHeader />
       <main>
-      <div>
+      <div className="aside__form">
         <AppFinanceForm />
         <TotalValues />
       </div>
@@ -20,3 +20,4 @@ const App = () => {
 };
 
 export default App;
+

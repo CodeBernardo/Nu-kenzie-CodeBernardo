@@ -4,8 +4,8 @@ export const AppFinanceForm = () => {
   return (
     <>
       <section className={styles.form__section}>
-        <fieldset>
-          <form action="" className={styles.form__container}>
+        <div className={styles.form__container}>
+          <form action="">
             <label htmlFor="description" className="text-r">
               Descrição
             </label>
@@ -36,7 +36,7 @@ export const AppFinanceForm = () => {
             </select>
             <button className="head-line">Inserir valor</button>
           </form>
-        </fieldset>
+        </div>
       </section>
     </>
   );
