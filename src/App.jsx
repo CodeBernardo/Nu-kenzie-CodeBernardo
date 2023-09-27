@@ -17,7 +17,10 @@ const App = () => {
     setValuesList([...valuesList, newValue]);
   };
 
-  const removeValue = () => {};
+  const removeValue = (id) => {
+    const newValuesList = valuesList.filter((value) => value.id !== id);
+    setValuesList(newValuesList);
+  };
 
   return (
     <>
@@ -27,7 +30,7 @@ const App = () => {
           <AppFinanceForm addValue={addValue} />
           <TotalValues valuesList={valuesList} />
         </div>
-        <FinanceList />
+        <FinanceList valuesList={valuesList} removeValue={removeValue} />
       </main>
     </>
   );

@@ -1,5 +1,4 @@
 import styles from './index.module.scss';
-// import { useState, useEffect } from 'react';
 
 export const TotalValues = ({ valuesList }) => {
   const balance = valuesList.reduce(
