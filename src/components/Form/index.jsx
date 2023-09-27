@@ -1,18 +1,23 @@
 import styles from './index.module.scss';
 import { useState } from 'react';
-import { FormInput } from './inputs/index';
+import { FormInput, FormSelect } from './inputs/index';
 
-export const AppFinanceForm = () => {
+export const AppFinanceForm = ({addValue}) => {
+  // const auth = JSON.parse(localStorage.getItem('@nukenzie:valuesList'))
   const [description, setDescription] = useState('');
-  const [value, setValue] = useState('');
+  const [amount, setAmount] = useState('');
   const [typeOfValue, setTypeOfValue] = useState('credit');
+  // const [valuesList, setValuesList] = useState((auth ? JSON.parse(localStorage.getItem('@nukenzie:valuesList')) : []));
+    
+  // useEffect(() => {
+  //   localStorage.setItem("@nukenzie:valuesList", JSON.stringify(valuesList));
+  // }, [valuesList]);
 
   const submitForm = (e) => {
     e.preventDefault();
-    console.log({ description, value, typeOfValue });
+    addValue(description, amount, typeOfValue);
     setDescription('');
-    setValue('');
-    setTypeOfValue('');
+    setAmount(''); 
   };
 
   return (
@@ -26,29 +31,27 @@ export const AppFinanceForm = () => {
               type="text"
               placeholder="Digite aqui sua descrição..."
               value={description}
-              setValue={setDescription}
+              handleOnChange={setDescription}
             />
             <small className="text-r">Ex: compra de roupas</small>
             <FormInput
-              label="Descrição"
+              label="Valor (R$)"
               id="value"
               type="number"
               placeholder="Digite um valor..."
-              value={value}
-              setValue={setValue}
+              value={amount}
+              handleOnChange={setAmount}
             />
-            <label htmlFor="typeOfValue" className="text-r">
-              Tipo de valor
-            </label>
-            <select
+            <FormSelect
+              label="Tipo de valor"
               name="typeOfValue"
               id="typeOfValue"
               value={typeOfValue}
-              onChange={(e) => setTypeOfValue(e.target.value)}
+              handleOnChange={setTypeOfValue}
             >
               <option value="credit">Entrada</option>
               <option value="debit">Saida</option>
-            </select>
+            </FormSelect>
             <button className="head-line" type="submit">
               Inserir valor
             </button>

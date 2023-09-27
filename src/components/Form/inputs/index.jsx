@@ -4,7 +4,7 @@ export const FormInput = ({
   type,
   placeholder,
   value,
-  setValue,
+  handleOnChange,
 }) => {
   return (
     <>
@@ -17,14 +17,14 @@ export const FormInput = ({
         id={id}
         placeholder={placeholder}
         className="head-line"
-        onChange={(e) => setValue(e.target.value)}
+        onChange={(e) => handleOnChange(e.target.value)}
         value={value}
       />
     </>
   );
 };
 
-export const FormSelect = ({ children, label, id, value, setValue }) => {
+export const FormSelect = ({ label, id, value, handleOnChange, children }) => {
   return (
     <>
       <label htmlFor={id} className="text-r">
@@ -34,7 +34,8 @@ export const FormSelect = ({ children, label, id, value, setValue }) => {
         name={id}
         id={id}
         value={value}
-        onChange={(e) => setValue(e.target.value)}>
+        onChange={(e) => handleOnChange(e.target.value)}
+      >
         {children}
       </select>
     </>
