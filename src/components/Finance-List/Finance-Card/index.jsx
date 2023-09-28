@@ -13,7 +13,7 @@ export const FinanceCard = ({ value, removeValue }) => {
         <div className={styles.description__container}>
           <h3 className="title-3">{value.title}</h3>
           <small className="text-r">
-            {value.type === 'credit' ? 'Entrada' : 'Saída'}
+            {value.type === 'credit' ? 'Entrada' : 'Despesa'}
           </small>
         </div>
         <div className={styles.value__container}>

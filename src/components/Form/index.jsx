@@ -2,22 +2,16 @@ import styles from './index.module.scss';
 import { useState } from 'react';
 import { FormInput, FormSelect } from './inputs/index';
 
-export const AppFinanceForm = ({addValue}) => {
-  // const auth = JSON.parse(localStorage.getItem('@nukenzie:valuesList'))
+export const AppFinanceForm = ({ addValue }) => {
   const [description, setDescription] = useState('');
   const [amount, setAmount] = useState('');
   const [typeOfValue, setTypeOfValue] = useState('credit');
-  // const [valuesList, setValuesList] = useState((auth ? JSON.parse(localStorage.getItem('@nukenzie:valuesList')) : []));
-    
-  // useEffect(() => {
-  //   localStorage.setItem("@nukenzie:valuesList", JSON.stringify(valuesList));
-  // }, [valuesList]);
 
   const submitForm = (e) => {
     e.preventDefault();
     addValue(description, amount, typeOfValue);
     setDescription('');
-    setAmount(''); 
+    setAmount('');
   };
 
   return (
