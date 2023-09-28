@@ -22,8 +22,8 @@ const App = () => {
       value: Number(amount),
       type: typeOfValue,
     };
-    if(newValue.title === "")  {
-      alert("Um título deve ser adicionado a operação")
+    if (!newValue.title || !newValue.value) {
+      alert('Preencha todos os campos!');
     } else {
       setValuesList([...valuesList, newValue]);
     }
@@ -40,7 +40,11 @@ const App = () => {
       <main>
         <div className="aside__form">
           <AppFinanceForm addValue={addValue} />
-          <TotalValues valuesList={valuesList} />
+          {valuesList.length !== 0 ? (
+            <TotalValues valuesList={valuesList} />
+          ) : (
+            ''
+          )}
         </div>
         <FinanceList valuesList={valuesList} removeValue={removeValue} />
       </main>

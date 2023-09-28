@@ -59,3 +59,11 @@
 }
 
 
+@media (min-width: 1024px) {
+  .form__container {
+    button {
+      width: unset;
+      align-self: unset;
+    }
+  }
+}
