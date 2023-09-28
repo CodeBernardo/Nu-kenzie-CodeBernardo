@@ -49,6 +49,10 @@
     
     button {
       align-self: flex-end;
+
+      &:hover {
+        background-color: var(--grey-2);
+      }
     }
   }
 }
