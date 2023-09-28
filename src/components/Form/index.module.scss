@@ -20,6 +20,10 @@
         background-color: var(--grey-4);
         border: none;
         border-radius: var(--radius-1);
+
+        option {
+          padding: 1rem;
+        }
       }
 
     small {

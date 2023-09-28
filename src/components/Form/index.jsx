@@ -43,8 +43,8 @@ export const AppFinanceForm = ({ addValue }) => {
               value={typeOfValue}
               handleOnChange={setTypeOfValue}
             >
-              <option value="credit">Entrada</option>
-              <option value="debit">Saida</option>
+              <option value="credit" className="head-line">Entrada</option>
+              <option value="debit" className="head-line">Saida</option>
             </FormSelect>
             <button className="head-line" type="submit">
               Inserir valor
