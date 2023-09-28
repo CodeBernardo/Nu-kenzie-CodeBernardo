@@ -22,7 +22,11 @@ const App = () => {
       value: Number(amount),
       type: typeOfValue,
     };
-    setValuesList([...valuesList, newValue]);
+    if(newValue.title === "")  {
+      alert("Um título deve ser adicionado a operação")
+    } else {
+      setValuesList([...valuesList, newValue]);
+    }
   };
 
   const removeValue = (id) => {
